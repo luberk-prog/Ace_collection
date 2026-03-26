@@ -1185,8 +1185,8 @@ body:not(.desktop-cursor) #cursor-ring { display: none; }
   .delivery-card { grid-column: span 4; }
   .testimonials-grid { grid-template-columns: 1fr 1fr; }
   .testimonials-grid .testimonial-card:last-child { grid-column: span 2; }
-  .quickview-modal { flex-direction: column; max-height: 90vh; }
-  .quickview-img-wrap { width: 100%; aspect-ratio: 16/9; }
+  .quickview-modal { flex-direction: column; max-height: 92vh; }
+  .quickview-img-wrap { width: 100%; aspect-ratio: 1/1; }
   .products-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
@@ -1230,7 +1230,10 @@ body:not(.desktop-cursor) #cursor-ring { display: none; }
   .section { padding: 72px 0; }
   .cta-card { padding: 48px 24px; }
   .checkout-modal { padding: 28px 20px; }
-  .quickview-modal { flex-direction: column; }
+  .quickview-modal { flex-direction: column; padding: 0; overflow-y: auto; }
+  .quickview-details { padding: 24px 20px; gap: 12px; }
+  .qv-price { font-size: 1.6rem; }
+  .quickview-details h2 { font-size: 1.5rem; }
   .hero-ctas { flex-direction: column; align-items: center; width: 100%; }
   .hero-ctas .btn { width: 100%; max-width: 300px; }
 }
