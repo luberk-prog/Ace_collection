@@ -280,9 +280,10 @@ function initFeaturedCarousel() {
   });
 
   // Dots
-  const total = featured.slice(0, 8).length;
-  const visible = 3;
-  const pages = total - visible + 1;
+  const total = featured.length;
+  const isMobile = window.innerWidth <= 768;
+  const visible = isMobile ? 1 : 3;
+  const pages = Math.max(1, total - visible + 1);
   for (let i = 0; i < pages; i++) {
     const dot = document.createElement('button');
     dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
