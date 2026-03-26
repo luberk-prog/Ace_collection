@@ -481,10 +481,15 @@ body:not(.desktop-cursor) #cursor-ring { display: none; }
 .featured-carousel {
   display: flex;
   gap: 24px;
-  overflow: hidden;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   width: 100%;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+.featured-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 .carousel-arrow {
   flex-shrink: 0;

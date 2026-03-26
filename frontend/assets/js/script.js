@@ -307,11 +307,21 @@ function initFeaturedCarousel() {
     goToSlide(Math.min(pages - 1, current + 1));
   });
 
+  // Sync dots on scroll
+  container.addEventListener('scroll', () => {
+    const cards = container.querySelectorAll('.product-card');
+    const cardW = cards[0]?.offsetWidth + 24 || 304;
+    const scrollIdx = Math.round(container.scrollLeft / cardW);
+    current = Math.min(pages - 1, Math.max(0, scrollIdx));
+    dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }, { passive: true });
+
   // Auto play
-  let autoPlay = setInterval(() => goToSlide(current + 1 >= pages ? 0 : current + 1), 4000);
+  let autoPlay = setInterval(() => goToSlide(current + 1 >= pages ? 0 : current + 1), 5000);
+  container.addEventListener('touchstart', () => clearInterval(autoPlay));
   container.addEventListener('mouseenter', () => clearInterval(autoPlay));
   container.addEventListener('mouseleave', () => {
-    autoPlay = setInterval(() => goToSlide(current + 1 >= pages ? 0 : current + 1), 4000);
+    autoPlay = setInterval(() => goToSlide(current + 1 >= pages ? 0 : current + 1), 5000);
   });
 }
 
