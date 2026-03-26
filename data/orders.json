@@ -1,0 +1,59 @@
+[
+  {
+    "customer_name": "bigg kelly",
+    "customer_phone": "0205224056",
+    "customer_location": "koforidua / mile 50",
+    "items": [
+      {
+        "id": 2,
+        "name": "Midnight Slim-Fit Polo",
+        "quantity": 1,
+        "subtotal": 110
+      }
+    ],
+    "total": 110,
+    "timestamp": "2026-03-23T11:18:51.772Z"
+  },
+  {
+    "customer_name": "bigg kelly",
+    "customer_phone": "0205224056",
+    "customer_location": "koforidua / mile 50",
+    "items": [
+      {
+        "id": 101,
+        "name": "Drop-Shoulder Logo Tee",
+        "quantity": 1,
+        "subtotal": 90
+      },
+      {
+        "id": 108,
+        "name": "Slim Oxford Micro-Check Shirt",
+        "quantity": 1,
+        "subtotal": 130
+      }
+    ],
+    "total": 220,
+    "timestamp": "2026-03-23T11:26:24.630Z"
+  },
+  {
+    "customer_name": "big ben",
+    "customer_phone": "0205224056",
+    "customer_location": "Accra / lapaz",
+    "items": [
+      {
+        "id": 4,
+        "name": "Royal Blue Button-Up",
+        "quantity": 2,
+        "subtotal": 260
+      },
+      {
+        "id": 23,
+        "name": "Relaxed Fit Linen Pants",
+        "quantity": 1,
+        "subtotal": 195
+      }
+    ],
+    "total": 455,
+    "timestamp": "2026-03-23T12:46:11.098Z"
+  }
+]

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACE_COLLECTION — #ace your drip</title>
+  <meta name="description" content="ACE_COLLECTION — Premium streetwear & fashion boutique based in Koforidua. Shop shirts, pants, shorts, watches and more. #ace your drip." />
+  <meta name="keywords" content="ACE_COLLECTION, streetwear, fashion, boutique, Koforidua, dhollarace, shirts, watches, pants, shorts" />
+  <meta property="og:title" content="ACE_COLLECTION — #ace your drip" />
+  <meta property="og:description" content="Premium streetwear boutique. Nationwide delivery from Koforidua." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo.png" />
+  <link rel="apple-touch-icon" href="assets/img/logo.png" />
+</head>
+<body>
+
+<!-- ===================== PRELOADER ===================== -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo"><img src="assets/img/logo.png" alt="ACE" style="height:120px; width:auto; filter: drop-shadow(0 0 20px rgba(212,168,67,0.3));" /></div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+</div>
+
+<!-- ===================== CURSOR ===================== -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo" data-page="home">
+      <img src="assets/img/logo.png" alt="ACE_COLLECTION" class="logo-img" />
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active" data-page="home">Home</a>
+      <a href="#shop" class="nav-link" data-page="shop">Shop</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Open Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HOME PAGE ===================== -->
+<section id="home" class="page active">
+
+  <!-- HERO -->
+  <div class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">Koforidua's Finest</div>
+      <h1 class="hero-title reveal-up">
+        <span class="title-ace">ACE</span><span class="title-sep">_</span><span class="title-col">COLLECTION</span>
+      </h1>
+      <p class="hero-tag reveal-up">#ace your drip</p>
+      <p class="hero-sub reveal-up">Premium streetwear that hits different. From Koforidua to your doorstep — nationwide.</p>
+      <div class="hero-ctas reveal-up">
+        <button class="btn-primary" id="heroShopBtn">Shop Now</button>
+        <button class="btn-secondary" id="heroExploreBtn">Explore Collection</button>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </div>
+
+  <!-- MARQUEE STRIP -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>ACE YOUR DRIP</span><span>★</span>
+      <span>KOFORIDUA'S FINEST</span><span>★</span>
+      <span>NATIONWIDE DELIVERY</span><span>★</span>
+      <span>SHIRTS · PANTS · SHORTS · WATCHES · HOODIES</span><span>★</span>
+      <span>ACE YOUR DRIP</span><span>★</span>
+      <span>KOFORIDUA'S FINEST</span><span>★</span>
+      <span>NATIONWIDE DELIVERY</span><span>★</span>
+      <span>SHIRTS · PANTS · SHORTS · WATCHES · HOODIES</span><span>★</span>
+    </div>
+  </div>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section featured-section" id="featured">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Hand-Picked</span>
+        <h2>Featured Drops</h2>
+        <p>Curated heat. Limited pieces. Don't sleep.</p>
+      </div>
+      <div class="featured-carousel-wrapper">
+        <button class="carousel-arrow carousel-prev" id="featPrev" aria-label="Previous">‹</button>
+        <div class="featured-carousel" id="featuredCarousel"></div>
+        <button class="carousel-arrow carousel-next" id="featNext" aria-label="Next">›</button>
+      </div>
+      <div class="carousel-dots" id="featDots"></div>
+    </div>
+  </section>
+
+  <!-- BRAND VIBE -->
+  <section class="section vibe-section reveal-section" id="about">
+    <div class="vibe-bg-text">ACE</div>
+    <div class="container vibe-grid">
+      <div class="vibe-text reveal-left">
+        <span class="section-tag">The Vibe</span>
+        <h2>Dress Sharp.<br/>Move Different.</h2>
+        <p>ACE_COLLECTION is more than a store — it's a movement. Every piece is handpicked to elevate your style game. We don't just sell clothes, we sell confidence.</p>
+        <ul class="vibe-list">
+          <li><span>✦</span> Curated streetwear & casuals</li>
+          <li><span>✦</span> Premium quality, accessible prices</li>
+          <li><span>✦</span> Nationwide delivery every Friday</li>
+          <li><span>✦</span> Based in Koforidua, GH</li>
+        </ul>
+      </div>
+      <div class="vibe-cards reveal-right">
+        <div class="vibe-stat-card glass-card">
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="vibe-stat-card glass-card">
+          <div class="stat-num">100+</div>
+          <div class="stat-label">Products</div>
+        </div>
+        <div class="vibe-stat-card glass-card">
+          <div class="stat-num">5★</div>
+          <div class="stat-label">Avg Rating</div>
+        </div>
+        <div class="vibe-stat-card glass-card delivery-card">
+          <div class="delivery-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="32" height="32"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div class="delivery-text">Nationwide Delivery<br/><small>Outside Koforidua? We drop on Fridays.</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">The Word</span>
+        <h2>What They Say</h2>
+      </div>
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <div class="testimonial-card glass-card reveal-up">
+          <div class="stars">★★★★★</div>
+          <p>"Bro the quality is mad! Got my shirt delivered in Accra on Friday, no cap this is the realest boutique in GH."</p>
+          <div class="testimonial-author"><div class="author-av">KK</div><div><strong>Kwame K.</strong><span>Accra</span></div></div>
+        </div>
+        <div class="testimonial-card glass-card reveal-up">
+          <div class="stars">★★★★★</div>
+          <p>"ACE_COLLECTION is the plug! The watch I ordered was fire, exactly as shown. Fast delivery and well packaged."</p>
+          <div class="testimonial-author"><div class="author-av">AO</div><div><strong>Ama O.</strong><span>Kumasi</span></div></div>
+        </div>
+        <div class="testimonial-card glass-card reveal-up">
+          <div class="stars">★★★★★</div>
+          <p>"Been shopping here since day one. The shorts are clean, the pants fit perfect. Always #acingmydrip"</p>
+          <div class="testimonial-author"><div class="author-av">EB</div><div><strong>Ebow B.</strong><span>Cape Coast</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section cta-section reveal-up">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-glow"></div>
+        <h2>Ready to Ace Your Drip?</h2>
+        <p>Browse the full collection and find your next fit.</p>
+        <button class="btn-primary" id="ctaShopBtn">Shop the Collection →</button>
+      </div>
+    </div>
+  </section>
+
+</section><!-- /HOME -->
+
+<!-- ===================== SHOP PAGE ===================== -->
+<section id="shop" class="page">
+  <div class="shop-hero">
+    <canvas id="shopCanvas"></canvas>
+    <div class="shop-hero-content">
+      <h1 class="reveal-up">The Collection</h1>
+      <p class="reveal-up">Every piece. Every vibe. All fire.</p>
+    </div>
+  </div>
+
+  <div class="container shop-container">
+    <!-- Filter Bar -->
+    <div class="filter-bar reveal-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="shirts">Shirts</button>
+      <button class="filter-btn" data-filter="pants">Pants</button>
+      <button class="filter-btn" data-filter="shorts">Shorts</button>
+      <button class="filter-btn" data-filter="hoodies">Hoodies</button>
+      <button class="filter-btn" data-filter="watches">Watches</button>
+      <button class="filter-btn" data-filter="others">Others</button>
+    </div>
+
+    <div class="products-count reveal-up"><span id="productCount">0</span> items</div>
+
+    <!-- Products Grid -->
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+</section><!-- /SHOP -->
+
+<!-- ===================== CART SIDEBAR ===================== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>Your Bag <span id="cartItemCount">(0)</span></h3>
+    <button class="cart-close" id="cartClose" aria-label="Close Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty" id="cartEmpty">
+      <div class="empty-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+      <p>Your bag is empty.</p>
+      <button class="btn-primary" id="cartShopBtn">Start Shopping</button>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total-row">
+      <span>Subtotal</span>
+      <span id="cartTotal">GH₵ 0.00</span>
+    </div>
+    <p class="cart-delivery-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16" style="vertical-align:middle;margin-right:5px"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Delivery outside Koforidua on Fridays</p>
+    <button class="btn-primary checkout-btn" id="checkoutBtn">Checkout →</button>
+  </div>
+</aside>
+
+<!-- ===================== CHECKOUT MODAL ===================== -->
+<div class="modal-overlay" id="checkoutOverlay">
+  <div class="checkout-modal glass-card">
+    <button class="modal-close" id="checkoutClose" aria-label="Close Checkout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="checkout-brand"><img src="assets/img/logo.png" alt="ACE" style="height:80px; width:auto;" /></div>
+    <h2>Complete Your Order</h2>
+    <p class="checkout-sub">Fill in your details and we'll process via WhatsApp.</p>
+
+    <form id="checkoutForm" class="checkout-form" novalidate>
+      <div class="form-group">
+        <label for="checkoutName">Full Name</label>
+        <input type="text" id="checkoutName" name="name" placeholder="Your full name" required />
+      </div>
+      <div class="form-group">
+        <label for="checkoutPhone">Phone Number</label>
+        <input type="tel" id="checkoutPhone" name="phone" placeholder="e.g. 0201234567" required />
+      </div>
+      <div class="form-group">
+        <label for="checkoutLocation">Delivery Location</label>
+        <input type="text" id="checkoutLocation" name="location" placeholder="Your city / area" required />
+      </div>
+
+      <div class="checkout-order-summary" id="checkoutSummary"></div>
+
+      <div class="checkout-total-row">
+        <span>Total</span>
+        <span id="checkoutTotal">GH₵ 0.00</span>
+      </div>
+
+      <div class="delivery-note-box">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <p>We deliver nationwide. Deliveries outside Koforidua are done on Fridays.</p>
+      </div>
+
+      <button type="submit" class="btn-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        Checkout via WhatsApp
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ===================== PRODUCT QUICKVIEW MODAL ===================== -->
+<div class="modal-overlay" id="quickviewOverlay">
+  <div class="quickview-modal glass-card">
+    <button class="modal-close" id="quickviewClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="quickview-img-wrap">
+      <img id="qvImg" src="" alt="" />
+    </div>
+    <div class="quickview-details">
+      <div class="qv-category" id="qvCategory"></div>
+      <h2 id="qvName"></h2>
+      <div class="qv-price" id="qvPrice"></div>
+      <button class="btn-primary qv-add-btn" id="qvAddBtn">Add to Bag</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== TOAST ===================== -->
+<div class="toast" id="toast"></div>
+
+<!-- ===================== CONTACT / FOOTER ===================== -->
+<footer class="footer" id="contact">
+  <div class="footer-glow"></div>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="assets/img/logo.png" alt="ACE" style="height:90px; width:auto;" />
+      </div>
+      <p>#ace your drip</p>
+      <div class="footer-socials">
+        <a href="https://www.snapchat.com/add/dhollarace" target="_blank" rel="noopener" class="social-link" aria-label="Snapchat">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.026.37-.037.56.12.064.315.14.538.14.187 0 .394-.059.611-.189.191-.11.392-.161.592-.161.434 0 .824.307.824.712 0 .348-.22.685-.637.977-.15.11-.374.222-.637.33-.77.327-.62.66-.527.95.35 1.087 1.763.949 2.29 1.35.427.326.454.674.454.802 0 .738-.718.993-1.226.993-.124 0-.235-.014-.337-.035-.206-.044-.393-.076-.563-.076-.251 0-.482.053-.702.187.003.078.003.156.003.234 0 1.927-1.167 4.122-3.208 4.845 1.297.354 3.29.908 4.41 2.157.265.295.33.58.33.792 0 .43-.233.772-.513.921-.29.154-.747.236-1.267.236-.477 0-.883-.066-1.085-.111-1.168-.26-2.105-.553-3.018-.553-.457 0-.904.086-1.359.363.136.5.216 1.05.216 1.66 0 .18-.01.357-.027.53A.84.84 0 0112 24a.84.84 0 01-.826-.838c-.017-.173-.027-.35-.027-.53 0-.61.08-1.16.216-1.66-.455-.277-.902-.363-1.359-.363-.913 0-1.85.293-3.018.553-.202.045-.608.111-1.085.111-.52 0-.977-.082-1.267-.236-.28-.149-.513-.49-.513-.921 0-.212.065-.497.33-.792 1.12-1.249 3.113-1.803 4.41-2.157-2.041-.723-3.208-2.918-3.208-4.845 0-.078 0-.156.003-.234-.22-.134-.451-.187-.702-.187-.17 0-.357.032-.563.076a2.498 2.498 0 01-.337.035c-.508 0-1.226-.255-1.226-.993 0-.128.027-.476.454-.802.527-.401 1.94-.263 2.29-1.35.093-.29.243-.623-.527-.95-.263-.108-.487-.22-.637-.33C.22 6.684 0 6.347 0 5.999c0-.405.39-.712.824-.712.2 0 .401.051.592.161.217.13.424.189.611.189.223 0 .418-.076.538-.14-.011-.19-.025-.38-.037-.56l-.003-.06c-.104-1.628-.23-3.654.299-4.847C4.388 1.069 7.745.793 8.735.793l.28.002c.76 0 2.11.001 3.19-.002z"/></svg>
+        </a>
+        <a href="https://wa.me/233201941596" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#home" data-page="home">Home</a>
+      <a href="#shop" data-page="shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-categories">
+      <h4>Categories</h4>
+      <a href="#shop" data-filter-nav="shirts">Shirts</a>
+      <a href="#shop" data-filter-nav="pants">Pants</a>
+      <a href="#shop" data-filter-nav="shorts">Shorts</a>
+      <a href="#shop" data-filter-nav="hoodies">Hoodies</a>
+      <a href="#shop" data-filter-nav="watches">Watches</a>
+      <a href="#shop" data-filter-nav="others">Others</a>
+    </div>
+
+    <div class="footer-contact" id="contact-info">
+      <h4>Reach Us</h4>
+      <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15" style="vertical-align:middle;margin-right:4px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Koforidua, Ghana</p>
+      <p><a href="tel:0209142386"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15" style="vertical-align:middle;margin-right:4px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg> 0209142386</a></p>
+      <p><a href="https://wa.me/233201941596"><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" style="vertical-align:middle;margin-right:4px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp: 0201941596</a></p>
+      <p><svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" style="vertical-align:middle;margin-right:4px"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.026.37-.037.56.12.064.315.14.538.14.187 0 .394-.059.611-.189.191-.11.392-.161.592-.161.434 0 .824.307.824.712 0 .348-.22.685-.637.977-.15.11-.374.222-.637.33-.77.327-.62.66-.527.95.35 1.087 1.763.949 2.29 1.35.427.326.454.674.454.802 0 .738-.718.993-1.226.993-.124 0-.235-.014-.337-.035-.206-.044-.393-.076-.563-.076-.251 0-.482.053-.702.187.003.078.003.156.003.234 0 1.927-1.167 4.122-3.208 4.845 1.297.354 3.29.908 4.41 2.157.265.295.33.58.33.792 0 .43-.233.772-.513.921-.29.154-.747.236-1.267.236-.477 0-.883-.066-1.085-.111-1.168-.26-2.105-.553-3.018-.553-.457 0-.904.086-1.359.363.136.5.216 1.05.216 1.66 0 .18-.01.357-.027.53A.84.84 0 0112 24a.84.84 0 01-.826-.838c-.017-.173-.027-.35-.027-.53 0-.61.08-1.16.216-1.66-.455-.277-.902-.363-1.359-.363-.913 0-1.85.293-3.018.553-.202.045-.608.111-1.085.111-.52 0-.977-.082-1.267-.236-.28-.149-.513-.49-.513-.921 0-.212.065-.497.33-.792 1.12-1.249 3.113-1.803 4.41-2.157-2.041-.723-3.208-2.918-3.208-4.845 0-.078 0-.156.003-.234-.22-.134-.451-.187-.702-.187-.17 0-.357.032-.563.076a2.498 2.498 0 01-.337.035c-.508 0-1.226-.255-1.226-.993 0-.128.027-.476.454-.802.527-.401 1.94-.263 2.29-1.35.093-.29.243-.623-.527-.95-.263-.108-.487-.22-.637-.33C.22 6.684 0 6.347 0 5.999c0-.405.39-.712.824-.712.2 0 .401.051.592.161.217.13.424.189.611.189.223 0 .418-.076.538-.14-.011-.19-.025-.38-.037-.56l-.003-.06c-.104-1.628-.23-3.654.299-4.847C4.388 1.069 7.745.793 8.735.793l.28.002c.76 0 2.11.001 3.19-.002z"/></svg> Snapchat: @dhollarace</p>
+      <div class="delivery-badge">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+        <span>Nationwide Delivery · Fridays (outside Koforidua)</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ACE_COLLECTION. All rights reserved.</p>
+    <p class="footer-made">Made with ♥ in Koforidua</p>
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

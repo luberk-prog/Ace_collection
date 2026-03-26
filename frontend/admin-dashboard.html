@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ACE_COLLECTION - Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-body">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Admin Panel</h2>
+        <button id="adminHamburger" class="admin-hamburger">☰</button>
+      </div>
+      <nav id="adminNav">
+        <a href="#" id="navProducts" class="active">Products</a>
+        <a href="#" id="navAddProduct">Add Product</a>
+        <a href="#" id="navLogout">Logout</a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <div id="viewProductsSection" class="section active">
+        <h2>Manage Products</h2>
+        <div class="table-container">
+          <table id="productsTable">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price (GH₵)</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div id="addProductSection" class="section" style="display:none;">
+        <h2 id="formTitle">Add Product</h2>
+        <form id="productForm" class="glass-card">
+          <input type="hidden" id="editProductId" />
+          <div class="form-group">
+            <label>Product Name</label>
+            <input type="text" id="prodName" required />
+          </div>
+          <div class="form-group">
+            <label>Price</label>
+            <input type="number" id="prodPrice" required />
+          </div>
+          <div class="form-group">
+            <label>Category</label>
+            <select id="prodCategory" required>
+            <option value="shirts">Shirts</option>
+            <option value="pants">Pants</option>
+            <option value="shorts">Shorts</option>
+            <option value="hoodies">Hoodies</option>
+            <option value="watches">Watches</option>
+            <option value="others">Others</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Image (Upload)</label>
+            <input type="file" id="prodImage" accept="image/*" />
+            <small id="imgHelp">Leave empty if not changing image in edit mode.</small>
+          </div>
+          <button type="submit" class="btn-primary" id="saveProductBtn">Save Product</button>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
