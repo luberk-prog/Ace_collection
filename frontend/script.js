@@ -1,4 +1,4 @@
-const API_URL = 'https://your-backend-url.onrender.com/api';
+const API_URL = 'https://ace-collection.onrender.com/api';
 
 // --- Mobile Admin Menu ---
 if (document.getElementById('adminHamburger')) {

@@ -19,7 +19,7 @@ let PRODUCTS = [];
 // Fetch products from API
 async function fetchProducts() {
   try {
-    const response = await fetch('https://your-backend-url.onrender.com/api/products');
+    const response = await fetch('https://ace-collection.onrender.com/api/products');
     if (!response.ok) throw new Error('API down');
     PRODUCTS = await response.json();
     PRODUCTS = PRODUCTS.map(p => ({...p, id: p._id || p.id})); 
