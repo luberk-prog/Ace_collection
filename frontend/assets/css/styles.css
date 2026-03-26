@@ -1205,7 +1205,15 @@ body:not(.desktop-cursor) #cursor-ring { display: none; }
   .nav-links.open { transform: translateX(0); }
   .nav-link { font-size: 1.2rem; padding: 14px 32px; }
 
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero-title { font-size: clamp(2.5rem, 15vw, 4.5rem); letter-spacing: 0.02em; }
+  .hero-tag { font-size: 1rem; letter-spacing: 0.1em; }
+  .hero-sub { font-size: 0.95rem; padding: 0 10px; }
+  .carousel-arrow { display: none; }
+  .featured-carousel { padding: 0 10px; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .footer-brand, .footer-links, .footer-categories, .footer-contact { display: flex; flex-direction: column; align-items: center; }
+  .footer-socials { justify-content: center; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .testimonials-grid .testimonial-card:last-child { grid-column: auto; }
   .vibe-cards { grid-template-columns: 1fr 1fr; }
@@ -1218,14 +1226,17 @@ body:not(.desktop-cursor) #cursor-ring { display: none; }
   .cta-card { padding: 48px 24px; }
   .checkout-modal { padding: 28px 20px; }
   .quickview-modal { flex-direction: column; }
-  .hero-ctas { flex-direction: column; align-items: center; }
+  .hero-ctas { flex-direction: column; align-items: center; width: 100%; }
+  .hero-ctas .btn { width: 100%; max-width: 300px; }
 }
 
 @media (max-width: 480px) {
+  .hero-title { font-size: clamp(2.2rem, 18vw, 3.8rem); line-height: 1; }
   .filter-bar { gap: 6px; justify-content: center; }
   .filter-btn { padding: 12px 18px; font-size: 0.85rem; }
   .products-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; }
+  .footer-bottom { flex-direction: column; gap: 16px; }
+  .footer-made { margin-top: 8px; }
 }
 
 /* ---------- LOADING SKELETON ---------- */
